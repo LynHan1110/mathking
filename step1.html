@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <input class="msg" readonly></input>
+</body>
+<script>
+
+  function random(start, end) {
+    return Math.trunc(Math.random() * (end - start)) + start;
+}
+
+  var randomNum1 = random(0, 9)  
+  var randomNum2 = random(0, 9)
+  window.AppInventor.setWebViewString(randomNum1 + "+" + randomNum2);
+    $(".msg").val(randomNum1 + "+" + randomNum2)
+
+</script>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* { margin: 0; font-family: jua; }
+  body {
+    display: grid;
+    justify-items: center;
+  }
+  input {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 40px;
+  }
+</style>
+</html>
